@@ -2,43 +2,51 @@
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_mixer.h>
 #include <stdio.h>
+#include <iostream>
 #include <vector>
+#include <filesystem>
 
 #include "../includes/var.hpp"
 #include "../includes/fonc.hpp"
 
-int main()
-{
-    // initialisation
+namespace fs = std::filesystem;
+
+int main() {
+    fs::path currentPath = fs::current_path();
+    std::cout << "The terminal is here : " << currentPath << std::endl;
+
+    // init
 
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0) {
-        SDL_Log("Erreur SDL_Init : %s", SDL_GetError());
+        SDL_Log("Error SDL_Init : %s", SDL_GetError());
         return 1;
     }
 
     int imgFlags = IMG_INIT_PNG;
     if (!(IMG_Init(imgFlags) & imgFlags))
     {
-        SDL_Log("Erreur SDL_image : %s", IMG_GetError());
+        SDL_Log("Error SDL_image : %s", IMG_GetError());
         SDL_Quit();
         return 1;
     }
 
     if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0) {
-        SDL_Log("Erreur Mix_OpenAudio : %s", Mix_GetError());
+        SDL_Log("Error Mix_OpenAudio : %s", Mix_GetError());
         IMG_Quit();
         SDL_Quit();
         return 1;
     }
 
-    Mix_Music* musique = Mix_LoadMUS("../data/Music/Song.wav");
-    if (musique == NULL) {
-        SDL_Log("Erreur chargement musique : %s", Mix_GetError());
+    fs::path musicPath = currentPath / "../data/Music/Song.wav";
+
+    Mix_Music* music = Mix_LoadMUS(musicPath.string().c_str());
+    if (music == NULL) {
+        SDL_Log("Error charging music : %s", Mix_GetError());
     } else {
-        Mix_PlayMusic(musique, -1);
+        Mix_PlayMusic(music, -1);
     }
 
-    // creation fenetre et renderer
+    // create window and renderer
 
     SDL_Window *win = SDL_CreateWindow("Test", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, screenX, screenY, SDL_WINDOW_SHOWN);
     SDL_Renderer *renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
@@ -52,9 +60,12 @@ int main()
 
     auto [textures, Player] = createTextures(renderer);
 
-    auto [map, collMap] = createMap("../data/map/map.txt", "../data/map/collMap.txt", 35);
+    fs::path mapPath = currentPath / "../data/map/map.txt";
+    fs::path collMapPath = currentPath / "../data/map/collMap.txt";
 
-    // boucle
+    auto [map, collMap] = createMap(mapPath.string(), collMapPath.string(), 35);
+
+    // loop
 
     while (running)
     {
@@ -88,7 +99,7 @@ int main()
         SDL_RenderPresent(renderer);
     }
 
-    // fin
+    // end
 
     for (size_t i = 0; i < textures.size(); i++)
         SDL_DestroyTexture(textures[i]);
@@ -98,8 +109,8 @@ int main()
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(win);
     
-    if (musique) {
-        Mix_FreeMusic(musique);
+    if (music) {
+        Mix_FreeMusic(music);
     }
     Mix_CloseAudio();
     IMG_Quit();

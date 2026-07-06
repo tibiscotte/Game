@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "Jeu1",
+					"name" : "Open-Poke",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Jeu1::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Jeu1-Debug-8a7aeab0b2bce1adfb44.json",
-					"name" : "Jeu1",
+					"id" : "Open-Poke::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Open-Poke-Debug-7112712c1b71fe79bd55.json",
+					"name" : "Open-Poke",
 					"projectIndex" : 0
 				}
 			]

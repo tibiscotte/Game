@@ -192,7 +192,7 @@ inline void drawPlayer(SDL_FRect& player, SDL_Renderer* renderer, const std::vec
     }
 }
 
-inline std::pair<std::vector<std::vector<int>>, std::vector<std::vector<int>>> createMap(const char* path, const char* path2, int rowSize) {
+inline std::pair<std::vector<std::vector<int>>, std::vector<std::vector<int>>> createMap(const fs::path path, const fs::path path2, int rowSize) {
     auto loadByFixedSize = [rowSize](const char* filePath) {
         std::vector<std::vector<int>> grid;
         std::ifstream file(filePath);

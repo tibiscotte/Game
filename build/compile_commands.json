@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/theo/Documents/codes/C++/Jeu1-0.1/build",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++17 -o CMakeFiles/Open-Poke.dir/src/main.cpp.o -c /home/theo/Documents/codes/C++/Jeu1-0.1/src/main.cpp",
+  "file": "/home/theo/Documents/codes/C++/Jeu1-0.1/src/main.cpp",
+  "output": "CMakeFiles/Open-Poke.dir/src/main.cpp.o"
+}
+]

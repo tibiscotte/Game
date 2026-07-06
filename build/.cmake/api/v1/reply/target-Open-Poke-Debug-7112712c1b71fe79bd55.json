@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Jeu1"
+			"path" : "Open-Poke"
 		}
 	],
 	"backtrace" : 1,
@@ -68,7 +68,7 @@
 			]
 		}
 	],
-	"id" : "Jeu1::@6890427a1f51a3e7e1df",
+	"id" : "Open-Poke::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -99,8 +99,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "Jeu1",
-	"nameOnDisk" : "Jeu1",
+	"name" : "Open-Poke",
+	"nameOnDisk" : "Open-Poke",
 	"paths" : 
 	{
 		"build" : ".",
