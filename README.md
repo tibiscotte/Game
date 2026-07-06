@@ -14,4 +14,12 @@
   - It must have a resolution of 16px for blocks and 64px for entities.
   - Keep the same name or modify the code.
 
+The executable is located in the "Linux" folder, but if you recompile the code, it will be in the "build" folder.
+
+I cannot compile for Windows or macOS, but you can do it yourself.
+
+Feel free to share your ideas for updates, textures, or maps in the discussions tab.
+
+If you have any questions, please don't hesitate to ask me.
+
 **Please help me find a name.**
