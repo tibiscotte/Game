@@ -1,1 +1,0 @@
-/usr/bin/c++ -g "CMakeFiles/Open-Poke.dir/src/main.cpp.o" -o Open-Poke  /usr/lib/x86_64-linux-gnu/libSDL2.so /usr/lib/x86_64-linux-gnu/libSDL2_image.so /usr/lib/x86_64-linux-gnu/libSDL2_mixer.so 

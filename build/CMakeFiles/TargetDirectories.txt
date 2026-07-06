@@ -1,3 +1,0 @@
-/home/theo/Documents/codes/C++/Jeu1-0.1/build/CMakeFiles/Open-Poke.dir
-/home/theo/Documents/codes/C++/Jeu1-0.1/build/CMakeFiles/edit_cache.dir
-/home/theo/Documents/codes/C++/Jeu1-0.1/build/CMakeFiles/rebuild_cache.dir

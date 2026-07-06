@@ -7,6 +7,9 @@
 #include <fstream>
 #include <iterator>
 #include <iostream>
+#include <filesystem>
+
+namespace fs = std::filesystem;
 
 inline void drawMap(std::vector<std::vector<int>> map, int blockSize, std::vector<SDL_Texture*> textures, SDL_Renderer* renderer) {
     for (int y = 0; y < map.size(); y++) {
@@ -193,7 +196,7 @@ inline void drawPlayer(SDL_FRect& player, SDL_Renderer* renderer, const std::vec
 }
 
 inline std::pair<std::vector<std::vector<int>>, std::vector<std::vector<int>>> createMap(const fs::path path, const fs::path path2, int rowSize) {
-    auto loadByFixedSize = [rowSize](const char* filePath) {
+    auto loadByFixedSize = [rowSize](const fs::path filePath) {
         std::vector<std::vector<int>> grid;
         std::ifstream file(filePath);
         

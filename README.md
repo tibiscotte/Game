@@ -11,7 +11,7 @@
 **How ​​do I modify the textures?**
   - Access the "blocks" folder located within the "data" folder to edit blocks, or the "entity" folder to edit entities.
   - Modify the desired texture.
-  - It must have a resolution of 16px for blocks and 64px for entities.
+  - It must have a resolution of 16px for blocks and 32px for entities.
   - Keep the same name or modify the code.
 
 **Other useful information**

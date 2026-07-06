@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/Jeu1.dir/src/main.cpp.o -o Jeu1  /usr/lib/x86_64-linux-gnu/libSDL2.so /usr/lib/x86_64-linux-gnu/libSDL2_image.so /usr/lib/x86_64-linux-gnu/libSDL2_mixer.so 
