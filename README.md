@@ -14,6 +14,10 @@
   - It must have a resolution of 16px for blocks and 32px for entities.
   - Keep the same name or modify the code.
 
+**How ​​do I modify the songs?**
+  - Go to the "Song" folder located inside the "data" folder.
+  - Add as many songs as you like if you modify the code.
+
 **Other useful information**
 
 The executable is located in the "Linux" folder, but if you recompile the code, it will be in the "build" folder.
